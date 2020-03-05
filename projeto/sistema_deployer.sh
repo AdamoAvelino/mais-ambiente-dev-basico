@@ -29,13 +29,13 @@ sudo useradd -m -p $(perl -e 'print crypt("secretdeployer", "git")') deployer
 
 #-------------------------------------------------------------------------------------
 echo "Criação dos repositórios para cada ambiente"
-sudo git init --bare /home/git/desenvolvimento
+sudo git init --bare --shared=group /home/git/desenvolvimento
 sudo chown -R git:desenvolvedor /home/git/desenvolvimento
 
-sudo git init --bare /home/git/homologacao
+sudo git init --bare --shared=group /home/git/homologacao
 sudo chown -R git:deployer /home/git/homologacao
 
-sudo git init --bare /home/git/treinamento
+sudo git init --bare --shared=group /home/git/treinamento
 sudo chown -R git:deployer /home/git/treinamento
 
 #----------------------------------------------------------------------------------------
