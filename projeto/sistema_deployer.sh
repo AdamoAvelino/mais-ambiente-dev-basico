@@ -18,7 +18,7 @@ echo "Options -Indexes" >> /etc/apache2/sites-available/000-default.conf
 echo "AllowOverride All" >> /etc/apache2/sites-available/000-default.conf
 echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf
 sudo chmod -R 644 /etc/apache2/sites-available/000-default.conf
-sudo servive apache2 restart
+sudo service apache2 restart
 
 
 #----------------------------------------------------------------------------------------
